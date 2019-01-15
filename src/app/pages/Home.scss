@@ -1,0 +1,46 @@
+.home {
+  .home__header {
+    margin: 20px 0;
+  }
+
+  .home__chart {
+  }
+
+  .home__content {
+
+    .home__content__header {
+      margin: 20px 0;
+    }
+
+    .home__content__items {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: inline-block;
+
+      span:first-child {
+        margin-left: 0px;
+      }
+
+      span {
+        background: #e3141e;
+        color: #FFFFFF;
+        padding: 15px;
+        border-radius: 7px;
+        display: inline-block;
+        float: left;
+        margin: 10px;
+
+        .fas {
+          background-color: #3c3c3c;
+          padding: 7px;
+          border-radius: 18px;
+          width: 35px;
+          height: 30px;
+          text-align: center;
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+  }
+}

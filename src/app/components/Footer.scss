@@ -1,0 +1,17 @@
+.content {
+  min-height: 100%;
+  padding-bottom: 100px;
+  margin-bottom: -60px;
+}
+.footer,
+.push {
+  height: 60px;
+}
+
+.footer {
+  background-image: url(/static/footer-pattern-small.jpg);
+  width: 100%;
+  background-color: #e3141e;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+}
