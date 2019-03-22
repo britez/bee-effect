@@ -16,7 +16,13 @@ const envKeys = Object.keys(env).reduce((prev, next) => {
 const plugins = [
     new FriendlyErrorsWebpackPlugin(),
     new ExtractTextPlugin({filename: 'main.css'}),
-    new webpack.DefinePlugin(envKeys)
+    new webpack.DefinePlugin(envKeys),
+    new webpack.DefinePlugin({
+        'process.env.NODE_ENV': dev ? '"development"' : '"production"',
+        'process.env.BROWSER': JSON.stringify(true),
+        __DEV__: dev
+      }),
+
   ];
 
 if ( !dev ) {

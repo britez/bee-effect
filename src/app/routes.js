@@ -1,9 +1,8 @@
 import Home from "./pages/Home";
 import Areas from "./pages/Areas";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Secret from "./components/Secret";
-
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Secret from "./pages/Secret";
 export default [
     {
         path: "/",

@@ -4,9 +4,10 @@ import Helmet from "react-helmet";
 import { Redirect } from "react-router";
 import RadarCmp from './../components/RadarCmp';
 import { fetchUser } from "../stores/users";
+import BaseComponent from "../components/common/model/baseComponent"
 
 
-class Home extends React.Component {
+class Home extends BaseComponent {
 
   constructor(props) {
     super(props);
@@ -28,6 +29,8 @@ class Home extends React.Component {
       return <Redirect to={this.state.redirect} />
     }
     return (
+      <div>
+        {this.addDevTools()}
         <div className='container home'>
           <Helmet>
               <title>Bee Effect - Home</title>
@@ -50,6 +53,7 @@ class Home extends React.Component {
             <div className='col-md-7 home__chart'>
               <RadarCmp data={this.props.user.stats} stroke='#E12027' fill='#E12027' label={this.props.user.name} dataKey='name' dataKey2='value' data={this.props.user.stats} onClick={(route) => this.setState({redirect: route})}/>
             </div>
+          </div>
           </div>
         </div>
     );

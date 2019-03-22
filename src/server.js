@@ -34,11 +34,13 @@ app.get("/*", (req, res) => {
 
     Promise.all(dataRequirements).then(() => {
         const jsx = (
+   
             <ReduxProvider store={store}>
                 <StaticRouter context={context} location={req.url}>
-                    <Layout />
+                    <Layout/>
                 </StaticRouter>
             </ReduxProvider>
+          
         );
         const reactDom = renderToString(jsx);
         const reduxState = store.getState();

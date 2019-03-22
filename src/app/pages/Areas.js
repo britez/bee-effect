@@ -2,9 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 import Helmet from "react-helmet";
 import { fetchAreas } from './../stores/areas';
+import BaseCmp from '../components/common/model/baseComponent';
 
 
-class Areas extends React.Component {
+class Areas extends BaseCmp {
 
   constructor(props) {
     super(props);
@@ -19,6 +20,8 @@ class Areas extends React.Component {
 
   render() {
       return (
+        <div>
+          {this.addDevTools()}
           <div className='container areas'>
             <Helmet>
                 <title>Bee Effect - Areas</title>
@@ -48,6 +51,7 @@ class Areas extends React.Component {
                 <h5>Communication</h5>
               </div>
             </div>
+          </div>
           </div>
       );
   }
